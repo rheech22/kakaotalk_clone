@@ -1,0 +1,62 @@
+.nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__link {
+    color: white;
+    position: relative;
+}
+
+@keyframes scaleAnimaiton {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+.nav__btn .fa-2x:hover {
+    animation: scaleAnimaiton 0.5s linear both;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: none;
+    }
+    50% {
+        transform: translateY(-5px) rotateY(280deg);
+    }
+    100% {
+        transform: none;
+    }
+}
+
+.nav__notification {
+    position: absolute;
+    right: -10px;
+    bottom: 15px;
+    animation: rotateAnimation 2s ease-in-out infinite;
+}
+
+.nav__dot {
+    background-color: #c23616;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    right: -7px;
+    animation: rotateAnimation 2s ease-in-out infinite;
+}
